@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block body %}
+ 
+<div class="block1">
+  <h1>{{ actor.name }}</h1>
+  <h2>Born: {{ actor.birth_date }}</h2>
+  <p>{{ actor.bio }}</p>
+<img src="/static/images/{{ actor_id }}.jpg">
+</div>
+{% endblock %}

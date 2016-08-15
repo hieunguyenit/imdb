@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block body %}
+ 
+<div class="block1">
+<h1>{{ movie.name }}</h1>
+  <h2>{{ movie.year }}</h2>
+  <p>{{ movie.description }}</p>
+<img src="/static/images/{{ movie_id }}.jpg">
+</div>
+{% endblock %}
