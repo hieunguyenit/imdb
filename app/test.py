@@ -1,3 +1,8 @@
-import time
 
-print time.strftime('%Y-%m-%d %H:%M:%S', time.gmtime(707677200000))
+from db import build_index
+
+my_index = build_index('../data/join.data')
+
+print my_index['movie']
+
+print my_index['actor']

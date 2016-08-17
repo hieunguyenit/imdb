@@ -5,6 +5,11 @@
   <h1>{{ actor.name }}</h1>
   <h2>Born: {{ actor.birth_date }}</h2>
   <p>{{ actor.bio }}</p>
-<img src="/static/images/{{ actor_id }}.jpg">
+  <img src="/static/images/{{ actor_id }}.jpg">
+  <ul>
+  {% for movie in movies %}
+      <li><a href="/movie/{{ movie }}">{{ movie|replace('_',' ')|title }}</a></li>
+  {% endfor %}
+  </ul>
 </div>
 {% endblock %}
