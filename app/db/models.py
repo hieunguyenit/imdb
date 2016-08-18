@@ -1,12 +1,9 @@
-import datetime
-
-
 class Actor(object):
 
     def __init__(self, name, birth_date, bio):
         self.id = id
         self.name = name
-        self.birth_date = datetime.datetime.fromtimestamp(float(birth_date)/1000.0).strftime('%m/%d/%Y')
+        self.birth_date = birth_date
         self.bio = bio
 
     def display(self):
