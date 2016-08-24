@@ -62,6 +62,11 @@ def get_actor_id(actor_id):
     :param actor_id:
     :return:
     """
+    # Check whether movie id exists
+    if actor_id not in imdb_index.get('actor'):
+        return render_template("500.html", error='Incorrect Actor ID')
+
+    # Inquiry actor by its id
     try:
         data_path = app.config['DATA_DIR'] + 'actor/' + actor_id + '.data'
 
@@ -83,6 +88,11 @@ def get_movie_id(movie_id):
     :param movie_id:
     :return:
     """
+    # Check whether movie id exists
+    if movie_id not in imdb_index.get('movie'):
+        return render_template("500.html", error='Incorrect Movie ID')
+
+    # Inquiry movie by its id
     try:
         data_path = app.config['DATA_DIR'] + 'movie/' + movie_id + '.data'
 
