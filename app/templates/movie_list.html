@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="block1">
+    <ul>
+    {% for key, value in movies.iteritems() %}
+        <li><a href="/movie/{{ key }}">{{ value.name }}</a></li>
+    {% endfor %}
+    </ul>
+</div>
+{% endblock %}

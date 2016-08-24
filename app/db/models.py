@@ -1,7 +1,6 @@
 class Actor(object):
-
-    def __init__(self, name, birth_date, bio):
-        self.id = id
+    def __init__(self, actor_id, name, birth_date, bio):
+        self.actor_id = actor_id
         self.name = name
         self.birth_date = birth_date
         self.bio = bio
@@ -11,7 +10,8 @@ class Actor(object):
 
 
 class Movie(object):
-    def __init__(self, name, year, description):
+    def __init__(self, movie_id, name, year, description):
+        self.movie_id = movie_id
         self.name = name
         self.year = year
         self.description = description
